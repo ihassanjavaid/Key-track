@@ -8,47 +8,49 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: openDrawer(context),
       backgroundColor: Colors.white,
       appBar: AppBar(
+        iconTheme: IconThemeData(
+          color: Colors.grey[800],
+          size: 40
+        ),
         backgroundColor: Colors.grey[200],
         centerTitle: true,
         //toolbarHeight: 100,
-        leading: GestureDetector(
-          onTap: () => Navigator.pop(context),
-          child: Icon(
-            Icons.menu,
-            size: 28,
-            color: Colors.black,
+        // leading: GestureDetector(
+        //   onTap: () => openDrawer(context),
+        //   child: Icon(
+        //     Icons.menu,
+        //     size: 28,
+        //     color: Colors.black,
+        //   ),
+        // ),
+        bottom: PreferredSize(
+          preferredSize: Size.fromHeight(50),
+          child: Container(
+            width: double.infinity,
+            height: 60,
+            color: Colors.grey[200],
+            child: Padding(
+              padding:
+                  const EdgeInsets.symmetric(vertical: 10.0, horizontal: 8.0),
+              child: CupertinoTextField(
+                cursorColor: Colors.grey[100],
+                placeholder: 'Name, email or contact number',
+              ),
+            ),
           ),
         ),
-         bottom: PreferredSize(
-           preferredSize: Size.fromHeight(50),
-           child: Container(
-             width: double.infinity,
-             height: 60,
-             color: Colors.grey[200],
-             child: Padding(
-               padding:
-               const EdgeInsets.symmetric(vertical: 10.0, horizontal: 8.0),
-               child: CupertinoTextField(
-                 cursorColor: Colors.grey[100],
-                 placeholder: 'Name, email or contact number',
-               ),
-             ),
-           ),
-         ),
-         actions: [
-           Padding(
-             padding: const EdgeInsets.only(top:15.0, right: 12),
-             child: Text(
-               'Add',
-               style: TextStyle(
-                   color: Colors.blueAccent,
-                 fontSize: 20
-               ),
-             ),
-           ),
-         ],
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(top: 15.0, right: 12),
+            child: Text(
+              'Add',
+              style: TextStyle(color: Colors.blueAccent, fontSize: 20),
+            ),
+          ),
+        ],
         title: Padding(
           padding: const EdgeInsets.only(top: 10.0),
           child: Text(
@@ -111,7 +113,7 @@ class MainScreen extends StatelessWidget {
                                 height: 10,
                               ),
                               Text(
-                                '2 days ago - Waiting',
+                                '7h ago • Qanvast Lead • Unassigned',
                               ),
                               SizedBox(
                                 height: 10,
@@ -214,7 +216,7 @@ class MainScreen extends StatelessWidget {
                                 height: 10,
                               ),
                               Text(
-                                '8 min ago - Referral',
+                                '7h ago • Qanvast Lead • Assigned',
                               ),
                               SizedBox(
                                 height: 10,
@@ -917,6 +919,155 @@ class MainScreen extends StatelessWidget {
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  Drawer openDrawer(BuildContext context) {
+    return Drawer(
+      child: ListView(
+        padding: EdgeInsets.zero,
+        //controller: _drawerController,
+        children: [
+          Container(
+            color: Colors.black54,
+            child: DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.black54,
+              ),
+              child: Row(
+                children: [
+                  CircleAvatar(
+                    maxRadius: 38,
+                    foregroundColor: Colors.green,
+                    backgroundColor: Colors.green[400],
+                    child: Text(
+                      'J',
+                      style: TextStyle(
+                        fontSize: 40,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                        height: 40,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 12.0),
+                        child: Text(
+                          'John Doe',
+                          style: TextStyle(
+                            fontSize: 26,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 12.0, top: 4.0),
+                        child: Text(
+                          '+1 20 456 7125',
+                          style: TextStyle(
+                            fontSize: 15,
+                            color: Colors.white,
+                            //fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ],
+                  )
+                ],
+              ),
+            ),
+          ),
+          Container(
+            color: Colors.black54,
+            height: MediaQuery.of(context).size.height - 50,
+            child: Column(
+              children: [
+                ListTile(
+                  title: Row(
+                    children: [
+                      Icon(
+                        Icons.notifications,
+                        color: Colors.white,
+                        size: 30,
+                      ),
+                      SizedBox(
+                        width: 16,
+                      ),
+                      Text(
+                        'Notifications',
+                        style: TextStyle(
+                          fontSize: 24,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Divider(
+                  thickness: 2,
+                ),
+                ListTile(
+                  title: Row(
+                    children: [
+                      Icon(
+                        Icons.live_help_rounded,
+                        color: Colors.white,
+                        size: 30,
+                      ),
+                      SizedBox(
+                        width: 16,
+                      ),
+                      Text(
+                        'Contact Support',
+                        style: TextStyle(
+                          fontSize: 24,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Divider(
+                  thickness: 2,
+                ),
+                ListTile(
+                  title: Row(
+                    children: [
+                      Icon(
+                        Icons.settings,
+                        color: Colors.white,
+                        size: 30,
+                      ),
+                      SizedBox(
+                        width: 16,
+                      ),
+                      Text(
+                        'Settings',
+                        style: TextStyle(
+                          fontSize: 24,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Divider(
+                  thickness: 2,
+                ),
+              ],
+            ),
+          )
+        ],
       ),
     );
   }
