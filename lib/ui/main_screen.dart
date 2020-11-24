@@ -13,10 +13,13 @@ class MainScreen extends StatelessWidget {
         backgroundColor: Colors.grey[200],
         centerTitle: true,
         //toolbarHeight: 100,
-        leading: Icon(
-          Icons.menu,
-          size: 28,
-          color: Colors.black,
+        leading: GestureDetector(
+          onTap: () => Navigator.pop(context),
+          child: Icon(
+            Icons.menu,
+            size: 28,
+            color: Colors.black,
+          ),
         ),
          bottom: PreferredSize(
            preferredSize: Size.fromHeight(50),
@@ -711,7 +714,7 @@ class MainScreen extends StatelessWidget {
                                 height: 5,
                               ),
                               Text(
-                                'Kaleen Bhaiya',
+                                'Shayk Fromen',
                                 style: TextStyle(
                                     color: Colors.grey[900],
                                     fontSize: 20,
