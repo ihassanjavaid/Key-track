@@ -52,118 +52,6 @@ class MainScreen extends StatelessWidget {
                     children: [
                       Material(
                         child: ListTile(
-                          title: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              SizedBox(
-                                height: 5,
-                              ),
-                              Text(
-                                'Elvin Arrow',
-                                style: TextStyle(
-                                    color: Colors.grey[900],
-                                    fontSize: 20,
-                                  fontWeight: FontWeight.w600
-                                ),
-                              ),
-                            ],
-                          ),
-                          subtitle: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Text(
-                                '8 min ago - Referral',
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              RichText(
-                                text: TextSpan(
-                                  children: [
-                                    TextSpan(
-                                      text: 'New ',
-                                      style: TextStyle(
-                                          color: Colors.blueAccent
-                                      ),
-                                    ),
-                                    TextSpan(
-                                        text: '• Contact as soon as possible',
-                                      style: TextStyle(
-                                        color: Colors.grey
-                                      )
-                                    ),
-                                  ]
-                                ),
-                              ),
-                              SizedBox(
-                                height: 5,
-                              ),
-                            ],
-                          ),
-                          trailing: Padding(
-                            padding: const EdgeInsets.only(top: 22),
-                            child: Container(
-                              width: 100,
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Container(
-                                    height: 10,
-                                    width: 24,
-                                    decoration: BoxDecoration(
-                                      color: Colors.grey[400],
-                                      borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(10),
-                                        topRight: Radius.circular(50),
-                                        bottomLeft: Radius.circular(10),
-                                        bottomRight: Radius.circular(50),
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    width: 4,
-                                  ),
-                                  Container(
-                                    height: 10,
-                                    width: 24,
-                                    decoration: BoxDecoration(
-                                      color: Colors.grey[400],
-                                      borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(10),
-                                        topRight: Radius.circular(50),
-                                        bottomLeft: Radius.circular(10),
-                                        bottomRight: Radius.circular(50),
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    width: 4,
-                                  ),
-                                  Container(
-                                    height: 10,
-                                    width: 24,
-                                    decoration: BoxDecoration(
-                                      color: Colors.grey[400],
-                                      borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(10),
-                                        topRight: Radius.circular(50),
-                                        bottomLeft: Radius.circular(10),
-                                        bottomRight: Radius.circular(50),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          )
-                        ),
-                      ),
-                      Material(
-                        child: ListTile(
                             title: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -228,6 +116,118 @@ class MainScreen extends StatelessWidget {
                                       width: 24,
                                       decoration: BoxDecoration(
                                         color: Colors.yellow[700],
+                                        borderRadius: BorderRadius.only(
+                                          topLeft: Radius.circular(10),
+                                          topRight: Radius.circular(50),
+                                          bottomLeft: Radius.circular(10),
+                                          bottomRight: Radius.circular(50),
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 4,
+                                    ),
+                                    Container(
+                                      height: 10,
+                                      width: 24,
+                                      decoration: BoxDecoration(
+                                        color: Colors.grey[400],
+                                        borderRadius: BorderRadius.only(
+                                          topLeft: Radius.circular(10),
+                                          topRight: Radius.circular(50),
+                                          bottomLeft: Radius.circular(10),
+                                          bottomRight: Radius.circular(50),
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 4,
+                                    ),
+                                    Container(
+                                      height: 10,
+                                      width: 24,
+                                      decoration: BoxDecoration(
+                                        color: Colors.grey[400],
+                                        borderRadius: BorderRadius.only(
+                                          topLeft: Radius.circular(10),
+                                          topRight: Radius.circular(50),
+                                          bottomLeft: Radius.circular(10),
+                                          bottomRight: Radius.circular(50),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            )
+                        ),
+                      ),
+                      Material(
+                        child: ListTile(
+                            title: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Text(
+                                  'Steve Haux',
+                                  style: TextStyle(
+                                      color: Colors.grey[900],
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w600
+                                  ),
+                                ),
+                              ],
+                            ),
+                            subtitle: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  '8 min ago - Referral',
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                RichText(
+                                  text: TextSpan(
+                                      children: [
+                                        TextSpan(
+                                          text: 'New ',
+                                          style: TextStyle(
+                                              color: Colors.blueAccent
+                                          ),
+                                        ),
+                                        TextSpan(
+                                            text: '• Contact as soon as possible',
+                                            style: TextStyle(
+                                                color: Colors.grey
+                                            )
+                                        ),
+                                      ]
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                              ],
+                            ),
+                            trailing: Padding(
+                              padding: const EdgeInsets.only(top: 22),
+                              child: Container(
+                                width: 100,
+                                child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                      height: 10,
+                                      width: 24,
+                                      decoration: BoxDecoration(
+                                        color: Colors.grey[400],
                                         borderRadius: BorderRadius.only(
                                           topLeft: Radius.circular(10),
                                           topRight: Radius.circular(50),
